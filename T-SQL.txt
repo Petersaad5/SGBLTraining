@@ -1,0 +1,49 @@
+---------T-SQl-----------------
+- Nouveau language Sql appris
+- Regarder les tables 
+- Index leur importance et comment decider sur quoi mettre un index
+- Varchar VS Nvarchar 
+- Besoin d'utilisation de Nvarchar(max)
+- Problem on ne peut pas indexer un nvarcharL(max) sur T-Sql
+- Solution:
+- Learned FTS ( Full text search ) !!! Tres important :
+	But :Allows efficient text search especially when using nvarchar(max) performance increase similar to indexing . De loin mieux que Like and contains....
+	Permet le language specific search donc chercher dans des languages ce qui peut etre utile quand on a plusieurs languague 
+	
+	Implementation:
+	Choisir quelle colone on veut mettre dans le full text search 
+	le contenu de ces colones sera mise dans la colone creer pour le FTS (computed ...)
+	Maintenant on pourra querry la contenance de cette column selon ce que l'on a mis dedans 
+		
+	Optimisation:
+	on remarque une optimisation tres importante en utilisant le fts cette optimisation varie de 30 % a 50% de gain de temps ce qui est vraiment tres bien surtout 
+	pour des requettes faite bcp de fois et automatiquement 
+	ex:(exercice a faire: regarder les tables et les requirement dire ou implementer le fts et tester l'optimisation apportee en cas d'implementation)
+	Select *
+	from exemple
+	Where First name like george or secondNamke like or ......   time 15 sec ~30k  rows fetched 
+		
+	meme requete mais au lieu du where on utilise le fts creer donc la nouvelle column Time 7 sec same nb of rows fetched 
+	
+	On remarque que l'utilisation de FTS est vraiment tres importante et permet un gain de temps et de ressourse importante surtout lors de travail sur des tables 
+	beacoup plus grandes et regulierement 
+	
+	Long projet :
+	Refactor un base de donne d'entrainement  visant l'optimisation et l'utilisation des principe ci dessus en fonction du use case de chaque table 
+	
+
+	Autres Sujets abordees:
+	Sanitasation:
+	-Script T-SQL
+	-But :
+	Verification des donnees contenue dans les table se fait chaque 24 h le soir apres une journee de changement de donees 
+	- permet d'etre sure que toute les donees inserees ce jours sont dans le bon format et suivent les contraintes imposees
+	-travail sur ce script et le fait quil se fasse automatiquement chaque 24 h
+	-introduction d'un problem quand les donnes sont sanitized et que la data est changer dans les talbes: dautre tables contenant ces informations ou les 
+	holding tables (table utilisee par exemple pour hold les donne quand on change de portable ou en agence ) ne sont plus synchroniser 
+	->solution : run un script de synchronisation apres chaque sanitisation :
+	- 3 tables present 1 holding du cote de la client app 1 holding cote agence et une temp contenant les 2
+	- le script de synchronisation vois les changement dans temps si elle sont agence et client les changement agence emporte et on enleve les modif des  2 table 	 holding sinon si elle sont que dans une on fait les changement requis dans les tables on sanitize et on enleve des tables holding si pas traiter sinon on les 	met dedans dans le format sanitized
+  	
+
+	
