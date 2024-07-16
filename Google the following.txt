@@ -1,0 +1,13 @@
+1) Google the following
+
+  - How to make HttpRequests in angular
+  - what are observables
+  - Environment ts file in angular
+  - google what are angular services 
+
+
+2) Focus on creating
+
+   -Components
+   -Services
+   -What is Environment

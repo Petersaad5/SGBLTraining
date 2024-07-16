@@ -1,0 +1,50 @@
+using BAL.IServices;
+using BAL.Services;
+using DAL;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<DapperAccess>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<ICardService, CardService>();
+
+// Add SPA static files configuration for Angular
+builder.Services.AddSpaStaticFiles(configuration =>
+{
+    configuration.RootPath = "../frontend.client/dist"; // Path to the Angular build output
+});
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseSpaStaticFiles();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+// Configure the application to use Angular in the SPA pipeline
+app.UseSpa(spa =>
+{
+    spa.Options.SourcePath = "../frontend.client"; // Path to your Angular project
+
+    if (app.Environment.IsDevelopment())
+    {
+        spa.UseAngularCliServer(npmScript: "start");
+    }
+});
+
+app.Run();

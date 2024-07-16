@@ -1,0 +1,19 @@
+---------------------------------------------------------------Angular Training-------------------------------------------------------------------------------------------------------------------
+
+Terminal commands:
+ -> Node setup
+	npm install when in the app to install all the npm dependencies to our folder (only done once on creation)
+ 
+ ->angular
+	- ng g c housing --standalone --inline-template -> generate a component with inline-template
+	- ng g s housing  -> generate a service
+	-ng generate interface housingLocation --> generate an interface 
+	- ng serve -> run the app 
+	
+ ->Json server 
+	-npm install -g json-server (done once to install the json server)
+	-json-server --watch db.json (running the server with db.json being the json containing data in our database)
+ 
+ 
+
+ 
