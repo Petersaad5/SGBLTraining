@@ -15,5 +15,8 @@ Terminal commands:
 	-json-server --watch db.json (running the server with db.json being the json containing data in our database)
  
  
+ ->authentication 
+	- npm install jwt-decode -> required download to extract claims from tokens
+	
 
  
