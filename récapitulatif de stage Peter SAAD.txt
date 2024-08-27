@@ -1,0 +1,40 @@
+﻿Ce document a pour but de raconter le déroulement de mon stage.
+
+
+Le stage a commencé par une période de formation d’environ trois semaines. Ces semaines ont débuté par un apprentissage en semi-autonomie guidée par mon responsable de stage. Durant cette période, j’ai appris à utiliser les outils de développement qu’il employait, qui m’étaient complètement nouveaux, notamment le langage C# et plus spécifiquement .NET, utilisant l’IDE Visual Studio Code pour la partie backend. Pour la base de données, j’ai dû apprendre à utiliser SQL Server 2022, ce qui n’était pas vraiment compliqué grâce aux connaissances en SQL acquises durant cette année. Pour la partie frontend, j'ai appris le framework Angular ainsi que le langage TypeScript, qui permet d’écrire du code JavaScript mais côté serveur. J'ai ensuite suivi une petite formation sur le contrôle de version, utilisant une version de GitLab hébergée sur leur serveur pour des raisons de sécurité.
+
+
+Une fois ces compétences acquises, j'ai travaillé sur un projet personnel dont le but était de mettre en œuvre ces compétences nouvellement acquises. Ce projet consistait à créer un clone d’une application client bancaire. Vous pouvez retrouver le code source en suivant les liens suivants :
+
+
+Backend : https://github.com/Petersaad5/LBGS.git
+
+
+Frontend : https://github.com/Petersaad5/LBGSFrontEnd.git
+
+
+Une fois mon projet terminé, il a été évalué par mon responsable de stage, qui a critiqué mon code et m’a donné des améliorations à apporter, notamment dans le domaine de la sécurité, car c'était un des enjeux les plus importants lorsqu'on parle d’une application bancaire.
+
+
+Suite à cela, j'ai rejoint l’équipe de développement des applications internes à la banque. Mon temps au sein de l’équipe était divisé en deux parties distinctes :
+
+
+Première partie :
+Durant la première, j'ai principalement travaillé sur des tâches en SQL, dont la création de procédures stockées SQL dans la base de données qui peuvent être appelées par les développeurs backend. J'ai commencé par créer des procédures pour les opérations de récupération, de mise à jour et de suppression (GET, UPDATE, DELETE). Ensuite, j'ai travaillé sur un plus grand problème de migration de base de données pour enfin m'occuper des procédures de synchronisation des tables.
+
+
+Deuxième partie :
+La deuxième partie était entièrement centrée sur la création d’une nouvelle application web dont le but était d’archiver les logs de l’entreprise, qui auparavant ne restaient dans le système que 90 jours. Durant cette période, j'ai travaillé sur plusieurs aspects de l'application. Premièrement, j’ai codé la page de connexion sur Angular que j'ai commitée. Mon commit a été critiqué lors de ce qu'ils appellent un code review, et après quelques modifications, mon code a été autorisé à être poussé(push). Ce fonctionnement a été suivi pour le reste du code que j'ai écrit, notamment le code pour écrire les logs dans la bonne base de données, ainsi que la fonction de filtrage des logs pour y accéder, l'affichage des logs ainsi que d'autres fonctions. Pour les fonctions plus complexes à implémenter, celles-ci ont été réalisées en peer coding entre moi et un autre développeur junior. À l’issue du développement de l’application, il me restait quelques jours avant la fin de mon stage, durant lesquels j'ai travaillé sur des tâches de maintenance mineures.
+
+
+Mon stage s'est ensuite conclu.
+
+
+Retour personnel :
+Ce stage m’a été vraiment bénéfique à plusieurs égards. Avant ce stage, je ne me voyais pas trop poursuivre une carrière dans le développement, car je trouvais que le fait d’apprendre de nouvelles technologies et frameworks tout au long de ma carrière serait contraignant. Mais j’ai été positivement surpris par ma capacité à m’adapter à de nouveaux outils facilement, ce qui est extrêmement gratifiant et cela a vraiment changé ma perception de ce métier, augmentant ma confiance en moi. Ce stage m’a aussi appris comment le développement et le travail en équipe se déroulent et m’a permis d’apprendre le contrôle de version en entreprise. Enfin, sur le plan personnel, ce stage m’a énormément aidé car je suis maintenant capable de créer des web apps personnelles complètes. J'ai utilisé ces connaissances pour coder, pendant mon temps libre, une application de suivi des dépenses et mon site personnel contenant mon portfolio et CV, que vous trouverez en suivant ce lien : 
+https://petersaad5.github.io/.
+
+
+
+
+En conclusion, ce stage a été vraiment enrichissant sur le plan personnel et professionnel, car il a changé mon avis sur le métier du développement et m’a appris à développer des applications complètes à titre personnel.
